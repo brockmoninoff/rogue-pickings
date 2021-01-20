@@ -156,6 +156,7 @@ header nav ul li a{
 .section-two h3,
 .section-three h3 {
 	/* padding: 10px 30px; */
+	padding: 10px 0px;
 }
 
 .menu {
@@ -181,17 +182,72 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 footer {
 	/* height: 50px; */
-	border-top: 3px solid #eee;
+	border-top: 1px solid #eee;
 	margin: 0 auto;
 	/* clear: both; */
 	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
 }
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875;
+}
+
+/* ---------- Tablet styles here ---------- */
+
+@media all and (min-width:768px) {
+	.bottom-section {
+		justify-content: space-around;
+		align-items: flex-start;
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+	}
+	.section-one,
+	.section-two,
+	.section-three {
+		flex-basis: 30%;
+		border: none;
+	}
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+	.section-two,
+	.section-three {
+		padding: 10px 1em;
+	}
+	footer {
+		border: none;
+	}
+}
+
+/* ---------- Desktop styles here ---------- */
+
+@media all and (min-width:1200px) {
+	header {
+		display: flex;
+		justify-content: space-between;
+		flex-flow: row nowrap;
+	}
+	header h1 {
+    width: auto;
+    /* padding: ;
+    border-bottom: ;
+    text-align: ; */
+  }
+	header nav {
+		width: 40%;
+		justify-content: flex-end;
+		flex-flow: row nowrap;
+	}
+	header nav ul {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+	}
 }
